@@ -1,0 +1,6 @@
+{
+  "verbose": true,
+  "watch": ["src"],
+  "ignore": ["dist", "test", ".git", "node_modules/**/node_modules"],
+  "exec": "nodemon src/index.ts --exec ts-node && cp -r ./src/schema ./dist && node dist/index.js"
+}
