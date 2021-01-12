@@ -13,7 +13,8 @@
     "apollo-server": "^2.19.1",
     "dotenv": "^8.2.0",
     "graphql": "^15.4.0",
-    "mongoose": "^5.11.11"
+    "mongoose": "^5.11.11",
+    "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
     "graphql-tools": "^7.0.2",
