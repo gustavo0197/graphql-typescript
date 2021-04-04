@@ -2,11 +2,15 @@
   "compilerOptions": {
     "allowJs": true,
     "outDir": "dist",
-    "rootDir": "src",
+    "baseUrl": "./src",
     "removeComments": true,
     "experimentalDecorators": true,
-    "module": "CommonJS",
+    "emitDecoratorMetadata": true,
+    "module": "commonjs",
     "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "decorators": ["./decorators/index.ts"]
+    }
   }
 }
