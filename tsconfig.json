@@ -6,11 +6,11 @@
     "removeComments": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "module": "CommonJS",
+    "module": "commonjs",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "paths": {
-      "@decorators": ["decorators/index.ts"]
+      "decorators": ["./decorators/index.ts"]
     }
   }
 }

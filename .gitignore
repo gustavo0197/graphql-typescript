@@ -4,4 +4,5 @@ dist
 .cache
 .vsconfig
 .env
+.vscode
 tags
