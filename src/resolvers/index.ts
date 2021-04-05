@@ -1,6 +1,6 @@
 import { fileLoader } from "merge-graphql-schemas";
 import { join } from "path";
-import { getResolvers } from "../decorators";
+import { getResolvers } from "@decorators";
 
 const queries = fileLoader(join(`${__dirname}/queries/`), {
   extensions: [".ts"],

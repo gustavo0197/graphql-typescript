@@ -11,7 +11,8 @@
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "paths": {
-      "decorators": ["./decorators/index.ts"]
+      "@decorators": ["./decorators/index.ts"],
+      "@utils": ["./utils/index.ts"]
     }
   }
 }
