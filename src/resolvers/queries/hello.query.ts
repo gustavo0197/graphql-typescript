@@ -1,12 +1,11 @@
-import { Query } from "../../decorators";
-import { Resolver } from "decorators";
+import { Query, Resolver, prop } from "../../decorators";
 
 @Resolver
 export default class HelloResolver {
   @Query("Hello")
-  public hello(data, { name }) {
-    if (name) {
-      return `Hi there, ${name}`;
+  public hello(@prop("name") name: string, @prop("lastname") lastname: string) {
+    if (name || lastname) {
+      return `Hi there, ${name} ${lastname}`;
     }
 
     return "Hi there";
