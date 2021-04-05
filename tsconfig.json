@@ -13,6 +13,7 @@
     "paths": {
       "@decorators": ["./decorators/index.ts"],
       "@utils": ["./utils/index.ts"]
-    }
+    },
+    "lib": ["es2016"]
   }
 }
