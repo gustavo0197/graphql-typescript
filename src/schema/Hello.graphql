@@ -1,5 +1,5 @@
 type Query {
-  Hello(name: String): String!
+  Hello(name: String, lastname: String): String!
 }
 
 type Mutation {

@@ -1,13 +1,9 @@
-import { Resolver, Mutation } from "../../decorators";
+import { Resolver, Mutation, prop } from "../../decorators";
 
 @Resolver
 export default class HelloResolver {
   @Mutation("Hello")
-  public hello(data, { name }) {
-    if (name) {
-      return `Hi there, ${name}, from hello mutation`;
-    }
-
-    return "Hi there from Hello mutation";
+  public hello(@prop("name") name: string) {
+    return `Hi there, ${name} from Hello mutation`;
   }
 }
