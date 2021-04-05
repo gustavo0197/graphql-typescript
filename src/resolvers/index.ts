@@ -10,4 +10,8 @@ const mutations = fileLoader(join(`${__dirname}/mutations/`), {
   extensions: [".ts"],
 });
 
-export default getResolvers([...queries, ...mutations]);
+const subscriptions = fileLoader(join(`${__dirname}/subscriptions/`), {
+  extensions: [".ts"],
+});
+
+export default getResolvers([...queries, ...mutations, ...subscriptions]);
