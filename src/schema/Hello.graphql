@@ -5,3 +5,8 @@ type Query {
 type Mutation {
   Hello(name: String): String!
 }
+
+
+type Subscription {
+  Hello(name: String): String
+}

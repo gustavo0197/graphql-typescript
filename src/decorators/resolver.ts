@@ -58,7 +58,7 @@ export function getResolvers(resolvers: any[]) {
     }
   }
 
-  let result = {};
+  let result: any = {};
 
   if (Object.keys(Query).length) result["Query"] = Query;
   if (Object.keys(Mutation).length) result["Mutation"] = Mutation;
