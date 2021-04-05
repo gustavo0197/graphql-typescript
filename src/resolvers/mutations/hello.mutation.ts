@@ -1,4 +1,4 @@
-import { Resolver, Mutation, prop } from "../../decorators";
+import { Resolver, Mutation, prop } from "@decorators";
 
 @Resolver
 export default class HelloResolver {
