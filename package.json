@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "nodemon",
-    "build": "eval $(rm -r dist) && tsc"
+    "build": "tsc"
   },
   "dependencies": {
     "reflect-metadata": "^0.1.13"
