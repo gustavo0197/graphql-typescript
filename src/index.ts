@@ -1,6 +1,7 @@
-export { prop } from "./decorators/prop";
-export { ctx } from "./decorators/context";
-export { getResolvers, Resolver } from "./decorators/resolver";
-export { Query } from "./decorators/query";
-export { Mutation } from "./decorators/mutation";
-export { Subscription } from "./decorators/subscription";
+export * from "./decorators/prop";
+export * from "./decorators/context";
+export * from "./decorators/resolver";
+export * from "./decorators/query";
+export * from "./decorators/mutation";
+export * from "./decorators/subscription";
+export * from "./decorators/auth";
