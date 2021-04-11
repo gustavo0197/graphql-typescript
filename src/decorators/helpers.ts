@@ -13,7 +13,11 @@ export function handleProps(target: any, key: string | symbol, args: any) {
   if (props) {
     for (let key in props) {
       // Set resolver function arguments
-      args[props[key].index] = queryArgs[props[key].propName];
+      if (props[key].propName) {
+        args[props[key].index] = queryArgs[props[key].propName];
+      } else {
+        args[props[key].index] = queryArgs;
+      }
     }
   }
 
@@ -30,4 +34,11 @@ export function handleProps(target: any, key: string | symbol, args: any) {
 
   //return method.apply(this, arguments);
   return args;
+}
+
+export function cloneMetadata(fromTarget: any, target: any, metadataKeys: string[]) {
+  metadataKeys.forEach((key: string) => {
+    const metadataValue: any = Reflect.getMetadata(key, fromTarget);
+    Reflect.defineMetadata(key, metadataValue, target);
+  });
 }

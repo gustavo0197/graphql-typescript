@@ -1,6 +1,0 @@
-{
-  "verbose": true,
-  "watch": ["src"],
-  "ignore": ["dist", "test", ".git", "node_modules/**/node_modules"],
-  "exec": "nodemon --exec ts-node -r tsconfig-paths/register src/index.ts && cp -r ./src/schema ./dist && node dist/index.js"
-}
