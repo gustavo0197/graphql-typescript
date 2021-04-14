@@ -3,9 +3,10 @@ import "reflect-metadata";
 export function Resolver(constructor: Function) {
   const _getResolverFunctions = (operationType: string) => {
     let operations = {};
-    const operationFields = Object.keys(constructor.prototype).filter(
-      (field: string) => Reflect.getMetadata("type", constructor.prototype[field]) == operationType
-    );
+    const operationFields = Object.keys(constructor.prototype).filter((field: string) => {
+      console.log(`Metadata keys [${operationType}]:[${field}] `);
+      return Reflect.getMetadata("type", constructor.prototype[field]) == operationType;
+    });
 
     operationFields.forEach((field) => {
       // Get operation name
@@ -30,11 +31,16 @@ export function getResolvers(resolvers: any[]) {
   let Query = {};
   let Mutation = {};
   let Subscription = {};
+  console.log("getResolvers: ", resolvers);
 
   for (let i = 0; i < resolvers.length; i++) {
     const queries = Reflect.getOwnPropertyDescriptor(resolvers[i], "Queries");
     const mutations = Reflect.getOwnPropertyDescriptor(resolvers[i], "Mutations");
     const subscriptions = Reflect.getOwnPropertyDescriptor(resolvers[i], "Subscriptions");
+
+    console.log("Queries: ", queries);
+    console.log("Mutations: ", mutations);
+    console.log("Subscriptions: ", subscriptions);
 
     if (queries) {
       const _queries = queries.value();
