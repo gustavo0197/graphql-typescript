@@ -1,6 +1,6 @@
 {
   "name": "@gustavo0197/graphql-typescript",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "source": "src/index.ts",
   "main": "dist/index.js",
   "license": "MIT",
@@ -13,13 +13,13 @@
     "build": "tsc"
   },
   "dependencies": {
-    "apollo-server": "^2.22.2",
-    "graphql": "^15.5.0",
+    "apollo-server": "^3.5.0",
+    "graphql": "^16.0.1",
     "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
     "ts-node": "^9.1.1",
-    "typescript": "^4.2.3"
+    "typescript": "^4.5.2"
   },
   "files": [
     "dist"

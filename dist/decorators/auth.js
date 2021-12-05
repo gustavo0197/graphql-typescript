@@ -16,7 +16,7 @@ function Auth() {
                 return new apollo_server_1.AuthenticationError("You need to be authenticated");
             }
         };
-        helpers_1.cloneMetadata(method, descriptor.value, Reflect.getOwnMetadataKeys(method));
+        (0, helpers_1.cloneMetadata)(method, descriptor.value, Reflect.getOwnMetadataKeys(method));
         return descriptor;
     };
 }

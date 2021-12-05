@@ -7,7 +7,7 @@ function Query(name) {
     return function (target, key, descriptor) {
         var method = descriptor.value;
         descriptor.value = function () {
-            var args = helpers_1.handleProps(target, key, arguments);
+            var args = (0, helpers_1.handleProps)(target, key, arguments);
             return method.apply(this, args);
         };
         Reflect.defineMetadata("type", "Query", descriptor.value);

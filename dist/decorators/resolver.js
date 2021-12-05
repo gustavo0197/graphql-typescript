@@ -68,7 +68,7 @@ exports.getResolvers = getResolvers;
 function validateUniqueOperations(operations, globalOperations, operationType) {
     operations.forEach(function (field) {
         if (globalOperations.includes(field)) {
-            throw new Error("There are a repeated " + operationType + " called \"" + field + "\"");
+            throw new Error("There are a repeated ".concat(operationType, " called \"").concat(field, "\""));
         }
     });
 }
