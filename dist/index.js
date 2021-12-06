@@ -16,4 +16,3 @@ __exportStar(require("./decorators/resolver"), exports);
 __exportStar(require("./decorators/query"), exports);
 __exportStar(require("./decorators/mutation"), exports);
 __exportStar(require("./decorators/subscription"), exports);
-__exportStar(require("./decorators/auth"), exports);
