@@ -1,6 +1,6 @@
 {
   "name": "@gustavo0197/graphql-typescript",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "source": "src/index.ts",
   "main": "dist/index.js",
   "license": "MIT",
